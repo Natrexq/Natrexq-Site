@@ -13,9 +13,19 @@ font-family: 'Slabo 13px', serif;
 
 
 /*TODO CSS Code:*/
+
+    @keyframes backanim {
+        0% { background-image: url('/lib/css/cssimg/siteback1.jpg');}
+        50% { background-image: url('/lib/css/cssimg/siteback2.jpg');}
+        100% { background-image: url('/lib/css/cssimg/siteback1.jpg');}
+    }
+
+
+
 body{
     height: clamp(152rem,220rem,225vw);
     margin: 0;
+    width: 100%;
 
 }
 :root{
@@ -24,6 +34,7 @@ body{
     --cooldark2: #202124;
     --cooldark3: #303136;
     --cooldark4: #191919;
+    --cooldark5: #1b1c1e;
     --bluedark: #2c333f;
     --bluedark2:#162c35;
     --white: #ffffff;
@@ -31,38 +42,357 @@ body{
     --coolgray: #a5a7af;
     --coolyellow: #d7b000;
    
+   
 }
 
-body :nth-child(1){
-   
+
+
+
+.cont{
+    width: 100%;
+    height: clamp(38rem,55rem,60vw);
+    display: flex;
     
-    background-color: var(--cooldark2);
+ 
 }
-body :nth-child(2){
-   
+
+.c1{
+    position: relative;
+    display: flex;
+    color: white;
+    animation:  backanim 5s infinite;
+    background-image: url('/lib/css/cssimg/siteback1.jpg');
+    background-size: cover;
+    -webkit-animation:  backanim 10s infinite;
+}
+    .c1back{
+        width: 100%;
+        height: 100%;
+        background-color: var(--cooldark4);
     
+        opacity: 90%;
+        position:absolute;
+     
+}
+    .c1content{
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+.c2{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: var(--coolyellow);
 }
-body :nth-child(3){
+.c3{
    
     
     background-color: var(--bluedark2);
+    
 }
-body :nth-child(4){
+.c4{
    
     
     background-color: var(--cooldark4);
 }
 
-.cont{
+.navbar{
     width: 100%;
-    height: clamp(38rem,55rem,60vw);
-    
- 
+    height: clamp(4.5rem,5rem,5.5vw);
+    background-color: var(--cooldark5);
+    position: fixed;
+    z-index: 6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
 }
+.profpic{
+    
+    border-radius: 50%;
+    width: clamp(2rem,3rem,4vw);
+    height: clamp(2rem,3rem,4vw);
+    background: url('/lib/css/cssimg/user.jpg');
+    background-size: cover;
+    filter: drop-shadow(0 0 3px #ededed);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-filter: drop-shadow(0 0 3px #ededed);
+}
+
+
+
+            .rolledmn{
+                margin-top: 4.5rem;
+                width: 100%;
+                height: 20em;
+                height: 0em;
+                opacity: 0;
+            
+                position: fixed;
+                z-index: 4;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                display: none;
+                transition: height 500ms;
+                -webkit-transition: height 500ms;
+                -moz-transition: height 500ms;
+                -ms-transition: height 500ms;
+                -o-transition: height 500ms;
+
+}
+          
+                .nvbutson{
+                    justify-content: center;
+                    align-items: center;
+                    width: 20rem;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+               
+                   
+                }
+                .rollback{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    background-color: var(--cooldark3);
+                    opacity: 90%;
+
+                }
+                #toroll{
+                    position: relative;
+                    z-index: 5;
+                }
+
+
+.nvcon{
+    width: clamp(11.3rem,11.5rem,20vw);
+    margin: 1rem;
+    height: 100%;
+}
+.nvcontent{
+    text-align: center;
+    margin: 0;
+    width: 7rem;
+    
+}
+.bts{
+    width: clamp(18rem,65rem,70vw);
+    
+    height: 100%;
+   
+}
+.spal{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nvbuts{
+    
+    width: 85%;
+    
+    height: 100%;
+    
+}
+.nvsrch{
+    width: clamp(8rem,18rem,20vw);
+   
+    height: 100%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flags{
+    width: clamp(8rem,9rem,16vw);
+}
+
+#fl{
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: clamp(2.8rem,3rem,3vw);
+    height: 5rem;
+    
+    align-items: center;
+  
+}
+.mnroll{
+    display: none;
+
+   }
+
+   .nbut{
+    padding-top: 1rem;
+    width: clamp(4.5rem,11rem,11.5vw);
+    height: 100%;
+    background: none;
+    border: none;
+
+   }
+   .nbut:hover .but{
+    width: 50%;
+    opacity: 1;
+
+   }
+    .txb{
+        color: var(--white);
+        font-weight: bold;
+        font-size: 130%;
+    }
+    .but{
+        width: 0%;
+        opacity: 0;
+        transition: 500ms opacity,700ms width;
+        -webkit-transition: 500ms opacity,700ms width;
+        -moz-transition: 500ms opacity,700ms width;
+        -ms-transition: 500ms opacity,700ms width;
+        -o-transition: 500ms opacity,700ms width;
+}
+    .flagpl{
+        background: url('/lib/css/cssimg/pl.png');
+        background-size: cover;
+        background-position: 50%;
+        width: clamp(2rem,3rem,4vw);
+        height: clamp(1.25rem,2rem,3vw);
+        opacity: 70%;
+        transition: opacity 500ms;
+        -webkit-transition: opacity 500ms;
+        -moz-transition: opacity 500ms;
+        -ms-transition: opacity 500ms;
+        -o-transition: opacity 500ms;
+    }
+    .flagen{
+        background: url('/lib/css/cssimg/uk.png');
+        background-size: cover;
+        background-position: 50%;
+        width: clamp(2rem,3rem,4vw);
+        height: clamp(1.25rem,2rem,3vw);
+        opacity: 70%;
+        transition: opacity 500ms;
+        -webkit-transition: opacity 500ms;
+        -moz-transition: opacity 500ms;
+        -ms-transition: opacity 500ms;
+        -o-transition: opacity 500ms;
+}
+    .flagen:hover,.flagpl:hover{
+        opacity: 100%;
+    }
+
+    .hlwo{
+        font-size: clamp(1.8rem,3rem,3.2vw);
+        letter-spacing: clamp(0.4rem,0.6rem,0.8vw);
+        font-weight: normal;
+        opacity: 80%;
+        color: #fff;
+    }
+ 
+
+    @media screen and (max-width: 600px) {
+        .navbar{
+            display: flex;
+            justify-content: left;
+        }
+       .nvsrch{
+        display: none;
+        
+       }
+       .nvbuts{
+        display: none;
+        
+       }
+       .mnroll{
+        display: flex;
+        font-size: 180%;
+        color: #fff;
+        margin: 3rem;
+        cursor: default;
+        opacity: 80%;
+        transition: 400ms opacity;
+        -webkit-transition: 400ms opacity;
+        -moz-transition: 400ms opacity;
+        -ms-transition: 400ms opacity;
+        -o-transition: 400ms opacity;
+}
+    .mnroll:hover,.mnroll:focus{
+        opacity: 100%;
+    }
+       .nvcon{
+        width: 100%;
+       }
+       
+      }
+
+
+      /* ? C2*/
+
+      .profilebig{
+        width: clamp(5rem,15rem,15.5vw);
+        height: clamp(5rem,15rem,15.5vw);
+        background-image: url('/lib/css/cssimg/user.jpg');
+        background-size: cover;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+        .blc{
+            color: #000000;
+           
+}
+        .welcome{
+            width: 10rem,55rem,52vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .dscenter{
     display: flex;
     justify-content: center;
+    align-items: center;
+
+}
+.dscenspace{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.dscenbett{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 
 }
@@ -72,6 +402,12 @@ body :nth-child(4){
     align-items: center;
     flex-direction: column;
 }
+.flex{
+    display: flex;
+}
+.block{
+    display: block;
+}
 .responsive{
     display: flex;
     flex-wrap: wrap;
@@ -80,14 +416,15 @@ body :nth-child(4){
     font-family: 'Slabo 13px', serif;
 }
 .texto{
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Lato', sans-serif;
 }
 .fsize_huge{
-    font-size: 220%;
+   
+    font-size: clamp(1rem,2.2rem,2.3vw);
 
 }
 .fsize_big{
-    font-size: 190;
+    font-size: clamp(0.7rem,1.9rem,2vw);
 }
 .fsize_bigsm{
     font-size: 170%;
@@ -99,7 +436,8 @@ body :nth-child(4){
 
 }
 .fsize_medsm{
-    font-size: 125%;
+    font-size: 135%;
+    font-size: clamp(1.1rem,1.35rem,1.4vw);
 
 }
 .fsize_sm{
@@ -108,5 +446,24 @@ body :nth-child(4){
 }
 .fsize_us{
     font-size: 90%;
+}
+.margo{
+    margin: 0;
+}
+.marg1{
+    margin: 0.5rem;
+}
+.colwh{
+    color: #ffffff;
+}
+.scalable{
+    display: flex;
+    flex-wrap: wrap;
+}
+.opac80{
+    opacity: 80%;
+}
+.normal{
+    font-weight: normal;
 }
 
