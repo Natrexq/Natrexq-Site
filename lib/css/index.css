@@ -1,3 +1,112 @@
+/*? Resources:*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,300&family=Lato:ital,wght@0,300;1,300;1,400;1,700&family=Libre+Baskerville&family=Montserrat:ital,wght@0,400;0,500;0,700;1,300&family=Poppins:ital,wght@1,200&family=Raleway:ital,wght@0,300;0,600;1,400&family=Roboto:ital,wght@0,500;1,300&family=Slabo+13px&display=swap');
+/*
+font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Slabo 13px', serif;
+*/
+
+
+/*TODO CSS Code:*/
 body{
-    background-color: yellow;
+    height: clamp(152rem,220rem,225vw);
+    margin: 0;
+
 }
+:root{
+    --purpcol: #9da2ff;
+    --cooldark1: #303136;
+    --cooldark2: #202124;
+    --cooldark3: #303136;
+    --cooldark4: #191919;
+    --bluedark: #2c333f;
+    --bluedark2:#162c35;
+    --white: #ffffff;
+    --darkwhite: #f8f9fa;
+    --coolgray: #a5a7af;
+    --coolyellow: #d7b000;
+   
+}
+
+body :nth-child(1){
+   
+    
+    background-color: var(--cooldark2);
+}
+body :nth-child(2){
+   
+    
+    background-color: var(--coolyellow);
+}
+body :nth-child(3){
+   
+    
+    background-color: var(--bluedark2);
+}
+body :nth-child(4){
+   
+    
+    background-color: var(--cooldark4);
+}
+
+.cont{
+    width: 100%;
+    height: clamp(38rem,55rem,60vw);
+    
+ 
+}
+.dscenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.dscolumn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.responsive{
+    display: flex;
+    flex-wrap: wrap;
+}
+.text{
+    font-family: 'Slabo 13px', serif;
+}
+.texto{
+    font-family: 'Libre Baskerville', serif;
+}
+.fsize_huge{
+    font-size: 220%;
+
+}
+.fsize_big{
+    font-size: 190;
+}
+.fsize_bigsm{
+    font-size: 170%;
+
+
+}
+.fsize_med{
+    font-size: 150%;
+
+}
+.fsize_medsm{
+    font-size: 125%;
+
+}
+.fsize_sm{
+    font-size: 100%;
+
+}
+.fsize_us{
+    font-size: 90%;
+}
+
