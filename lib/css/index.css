@@ -19,6 +19,11 @@ font-family: 'Slabo 13px', serif;
         50% { background-image: url('/lib/css/cssimg/siteback2.jpg');}
         100% { background-image: url('/lib/css/cssimg/siteback1.jpg');}
     }
+    @keyframes animcon {
+        0% { opacity: 0%;}
+        50% { opacity: 50%;}
+        100% { opacity: 0%;}
+    }
 
 
 
@@ -85,12 +90,37 @@ body{
         flex-direction: column;
     }
 .c2{
-   
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: var(--coolyellow);
+    position: relative;
+    
+}
+.c2cont{
+    width: clamp(19rem,55rem,80vw);
+    height: 80%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255,0.3);
+    border: 1px solid rgba(128, 128, 128, 0.275);
+   
+    border-radius: 1rem;
+    backdrop-filter:blur(22px);
+ 
+}
+.c2back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 10%;
+    animation: animcon 10s infinite;
+    background-image: linear-gradient(#fbff00,#d78500);
+    -webkit-animation: animcon 10s infinite;
 }
 .c3{
    
@@ -116,18 +146,21 @@ body{
 
 }
 .profpic{
-    
-    border-radius: 50%;
-    width: clamp(2rem,3rem,4vw);
-    height: clamp(2rem,3rem,4vw);
-    background: url('/lib/css/cssimg/user.jpg');
-    background-size: cover;
-    filter: drop-shadow(0 0 3px #ededed);
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    -webkit-filter: drop-shadow(0 0 3px #ededed);
+        border-radius: 50%;
+        width: clamp(2rem,3.2rem,4vw);
+        height: clamp(2rem,3.2rem,4vw);
+        background-image: url('/lib/css/cssimg/mypfp.png');
+        background-position-x: 50%;
+        background-size: cover;
+        border-radius: 50%;
+        border: 0.15rem solid #f8f9fa;
+        box-shadow: 0 0 2.5px #adadad;
+        filter: drop-shadow(0 0 3px #000);
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        -webkit-filter: drop-shadow(0 0 3px #000);
 }
 
 
@@ -167,8 +200,8 @@ body{
                     width: 100%;
                     height: 100%;
                     position: absolute;
-                    background-color: var(--cooldark3);
-                    opacity: 90%;
+                    background-color: var(--cooldark5);
+                    opacity: 95%;
 
                 }
                 #toroll{
@@ -339,29 +372,74 @@ body{
       /* ? C2*/
 
       .profilebig{
-        width: clamp(5rem,15rem,15.5vw);
-        height: clamp(5rem,15rem,15.5vw);
-        background-image: url('/lib/css/cssimg/user.jpg');
+        width: clamp(5rem,10rem,15.5vw);
+        height: clamp(5rem,10rem,15.5vw);
+        background-image: url('/lib/css/cssimg/mypfp.png');
+        background-position-x: 50%;
         background-size: cover;
         border-radius: 50%;
+        border: 0.5rem solid #f8f9fa;
+        box-shadow: 0 0 5px #adadad;
+        filter: drop-shadow(0 0 10px #000);
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
-    }
+        -webkit-filter: drop-shadow(0 0 10px #000);
+}
         .blc{
             color: #000000;
            
+}   
+    .scmd{
+
+        width: clamp(7rem,9rem,10vw);
+        height: clamp(2rem,5rem,6rem);
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+        .scmbut{
+           margin: 0.6rem;
+           width: clamp(5rem,10rem,11vw);
+           height: clamp(1.5rem,3rem,4vw);
+           background-image: linear-gradient(#191919,#272727);
+           border-radius: 1.3rem;
+           border: none;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           -webkit-border-radius: 1.3rem;
+           -moz-border-radius: 1.3rem;
+           -ms-border-radius: 1.3rem;
+           -o-border-radius: 1.3rem;
 }
+
+            .scbut{
+                width: 90%;
+                height: 90%;
+                background-image: url('/lib/css/cssimg/github.png');
+                background-position-y: 50%;
+                background-size: cover;
+            }
         .welcome{
             width: 10rem,55rem,52vw;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+           
         
         }
-
+        .moretx{
+            display: flex;
+          
+            width: 80%;
+          
+          
+        }
 
 
 
@@ -420,11 +498,11 @@ body{
 }
 .fsize_huge{
    
-    font-size: clamp(1rem,2.2rem,2.3vw);
+    font-size: clamp(0.9rem,1.6rem,2.3vw);
 
 }
 .fsize_big{
-    font-size: clamp(0.7rem,1.9rem,2vw);
+    font-size: clamp(0.8rem,1.4rem,2vw);
 }
 .fsize_bigsm{
     font-size: 170%;
