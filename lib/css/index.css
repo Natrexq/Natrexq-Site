@@ -149,10 +149,73 @@ body {
 .c3 {
 
 
-    background-color: var(--bluedark2);
+    background-image: linear-gradient(to right,#5f2c82,#49a09d);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c3back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('/lib/css/cssimg/bback.png');
+    opacity: 15%;
+    filter: blur(3px);
+    background-size: cover;
+    backdrop-filter: blur(15px);
+    background-position-x: 50%;
+    -webkit-filter: blur(3px);
+}
+.slider{
+    position: relative;
+    width: 70rem;
+    height: 35rem;
+    background-color: rgb(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px #919191;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10rem;
+    flex-wrap: wrap;
+  
+}
+   .card{
+    opacity: 80%;
+    width: clamp(15rem,23rem,26vw);
+    height: clamp(6rem,12rem,15vw);
+    background-color: var(--cooldark2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ededed;
+    border-radius: 1em;
+    filter: drop-shadow(0 0 5px var(--cooldark5));
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    -webkit-filter: drop-shadow(0 0 5px var(--cooldark5));
+    transition: 500ms color,500ms background-color;
+    -webkit-transition: 500ms color,500ms background-color;
+    -moz-transition: 500ms color,500ms background-color;
+    -ms-transition: 500ms color,500ms background-color;
+    -o-transition: 500ms color,500ms background-color;
+}
+.card:hover{
+    background-color: #ededed;
+    color: #000;
+    border-radius: 1em;
+    filter: drop-shadow(0 0 5px #ededed);
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    -webkit-filter: drop-shadow(0 0 5px #ededed);
+
 
 }
-
 .c4 {
 
 
@@ -412,6 +475,9 @@ body {
 
     .nvcon {
         width: 100%;
+    }
+    .c3back{
+        background-position: 130rem;
     }
 
 }
